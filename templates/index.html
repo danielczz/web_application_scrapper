@@ -13,15 +13,20 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Hot Finds On Craigslist</h1>
+      <h1>Mars's missions briefing</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the data!</a></p>
     </div>
+      <h2>Latest NASA Mars News</h2>
+
 
     <!-- Craigslist Listings -->
     <div class="row" id="craiglist-listings">
       <div class="col-md-12">
-        <h4 class="heading">{{listings.headline}}</h4>
-      </div>
+ <h4 class="heading">{{listings.headline}}</h4>
+  <h7 class="heading">{{listings.price}}</h7>
+
+        <small>{{listings.hood}}</small>
+              </div>
     </div>
 
   </div>

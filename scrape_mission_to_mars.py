@@ -20,8 +20,10 @@ def scrape():
     soup = BeautifulSoup(html, "html.parser")
 
     # listings["headline"] = soup.find("a", class_="result-title").get_text()    
-    listings["headline"] = soup.find("a", class_="content_title").get_text()
-    # listings["price"] = soup.find("span", class_="result-price").get_text()
+    listings["headline"] = soup.find(class_="content_title").get_text()    
+
+    # listings["headline"] = /soup.find("a").get_text()
+    listings["price"] = soup.find(class_="article_teaser_body").get_text()
     # listings["hood"] = soup.find("span", class_="result-hood").get_text()
 
     return listings
