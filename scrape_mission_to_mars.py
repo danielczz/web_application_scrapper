@@ -1,6 +1,6 @@
 from splinter import Browser
 from bs4 import BeautifulSoup
-
+import time  
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
@@ -19,11 +19,35 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, "html.parser")
 
-    # listings["headline"] = soup.find("a", class_="result-title").get_text()    
+    # listings["headline"]
     listings["headline"] = soup.find(class_="content_title").get_text()    
 
-    # listings["headline"] = /soup.find("a").get_text()
+    # listings["article_body"]
     listings["article_body"] = soup.find(class_="article_teaser_body").get_text()
-    # listings["hood"] = soup.find("span", class_="result-hood").get_text()
+    
+    time.sleep(1)
+
+    # Visit image for listings["website"]
+    url_mars = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
+    browser.visit(url_mars)
+
+    time.sleep(1)
+
+    # Scrape page into Soup
+    html_mars = browser.html
+    soup = BeautifulSoup(html_mars, "html.parser")
+
+    # listings["image"] query
+    relative_image_path = soup.find_all('img')[3]["src"]
+
+    # Build final url to store
+    url_intro = "https://www.jpl.nasa.gov"
+    mars_img = url_intro + relative_image_path
+
+    # listings["image"] file
+    listings["image"] = mars_img
+
+    # Close the browser after scraping
+    browser.quit()
 
     return listings
