@@ -8,10 +8,13 @@ def init_browser():
     # executable_path = {"executable_path": "chromedriver.exe"} # Windows
     return Browser("chrome", **executable_path, headless=False)
 
+# Step 1 - Scraping
 
 def scrape():
     browser = init_browser()
     listings = {}
+
+    # NASA Mars News
 
     url = "https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest"
     browser.visit(url)
@@ -26,6 +29,8 @@ def scrape():
     listings["article_body"] = soup.find(class_="article_teaser_body").get_text()
     
     time.sleep(1)
+
+# JPL Mars Space Images - Featured Image
 
     # Visit image for listings["website"]
     url_mars = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
@@ -47,17 +52,11 @@ def scrape():
     # listings["image"] file
     listings["image"] = mars_img
 
-
-
-
-
-
-
-
+# Mars Weather
 
     time.sleep(1)
 
-    # Visit image for listings["website"]
+    # Visit twitter for listings["tweet"]
     url_tweet_mars = "https://twitter.com/marswxreport?lang=en"
     browser.visit(url_tweet_mars)
 
@@ -68,50 +67,13 @@ def scrape():
     # listings["tweet"] = soup.find(class_="content").get_text()    
     listings["tweets"] = soup.find(class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").get_text()    
 
-    # # listings["image"] query
-    # relative_tweet_path = soup.find_all('content')["p"]
-
-    # # Build final url to store
-    # url_intro = "https://www.jpl.nasa.gov"
-    # mars_img = url_intro + relative_image_path
-
-    # # listings["image"] file
-
-
-
-
-    # listings["image"] = mars_img
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Close the browser after scraping
     browser.quit()
+
+# Mars Facts
+
+
+
+
 
     return listings
