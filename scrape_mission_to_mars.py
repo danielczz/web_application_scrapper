@@ -47,6 +47,70 @@ def scrape():
     # listings["image"] file
     listings["image"] = mars_img
 
+
+
+
+
+
+
+
+
+    time.sleep(1)
+
+    # Visit image for listings["website"]
+    url_tweet_mars = "https://twitter.com/marswxreport?lang=en"
+    browser.visit(url_tweet_mars)
+
+    # Scrape page into Soup
+    html_tweet = browser.html
+    soup = BeautifulSoup(html_tweet, "html.parser")
+
+    # listings["tweet"] = soup.find(class_="content").get_text()    
+    listings["tweets"] = soup.find(class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").get_text()    
+
+    # # listings["image"] query
+    # relative_tweet_path = soup.find_all('content')["p"]
+
+    # # Build final url to store
+    # url_intro = "https://www.jpl.nasa.gov"
+    # mars_img = url_intro + relative_image_path
+
+    # # listings["image"] file
+
+
+
+
+    # listings["image"] = mars_img
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Close the browser after scraping
     browser.quit()
 
