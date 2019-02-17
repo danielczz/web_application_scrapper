@@ -10,26 +10,37 @@
 </head>
 
 <body>
+
   <div class="container">
 
     <div class="jumbotron text-center">
       <h1>Mars's missions briefing</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the data!</a></p>
     </div>
-      <h2>Latest NASA Mars News</h2>
 
+    <!-- NASA Mars News Listings (in this case just 1 element) -->
+    <h2>Latest NASA Mars News</h2>
 
-    <!-- Craigslist Listings -->
     <div class="row" id="craiglist-listings">
       <div class="col-md-12">
- <h4 class="heading">{{listings.headline}}</h4>
-  <h7 class="heading">{{listings.price}}</h7>
+          <h4 class="heading">{{listings.headline}}</h4>
+          <h7 class="heading">{{listings.article_body}}</h7>
+          
+          <hr>
+          <!-- JPL Mars Space Images - Featured Image -->
+          <h2>Featured Mars Space Image</h2>
 
-        <small>{{listings.hood}}</small>
-              </div>
+          
+      </div>
     </div>
 
   </div>
+
+
+  
+
+
+
 </body>
 
 </html>
