@@ -30,6 +30,15 @@ h2 {
     text-indent: 15px;
     }
 
+h5 {
+    text-indent: 15px;
+}
+
+h6 {
+    text-indent: 15px;
+}
+    
+
 
 c {
     letter-spacing: 4px;
@@ -39,6 +48,55 @@ no-padding {
   padding-left: 0;
   padding-right: 0;
 }
+
+
+
+
+
+.main_text {
+  text-indent: 20px;
+  text-align: justify;
+}
+
+thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+tbody {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: black;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.perz_table {
+  position: relative;
+  width: 90%;
+  margin: 10px auto;
+}
+
+@media (max-width: 480px) {
+.perz_table {
+  width: 300px;
+  display:block;
+  overflow-x: auto;
+  overflow-y: auto;
+  
+}
+.main_text {
+  text-align: left;
+  margin: 10px;
+}
+}
+
+
+
 </style>
 </head>
 
@@ -75,30 +133,30 @@ no-padding {
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h2>Latest NASA Mars News</h2>
+          <h2> Latest NASA's headline news from Mars: </h2>
           <h5 class="heading">{{listings.headline}}: </h5>
-          <h7 class="heading">{{listings.article_body}}</h7>
+          <h6 class="heading">{{listings.article_body}}</h6>
           <hr>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="background-color:white;">
-          <h2>Featured Mars Space Image</h2>
+          <h2> Latest surface image from Mars: </h2>
           <img src="{{ listings.image }}" alt="mars_latest_image">
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color:white;">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:white;">
-              <h2>Weather twitter forecast </h2>
+              <h2> Latest weather Twitter forecast: </h2>
               <h7 class="heading">{{listings.tweets}}</h7>
               <hr>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:white;">
-              <h2>Mars Facts </h2>
-              <table border="1" class="dataframe">
+              <h2> Mars's Factsheet: </h2>
+              <table border="1" class="dataframe perz_table">
                 <thead>
-                  <tr style="text-align: right;">
+                  <tr>
                     <th></th>
                     <th>Mars fact</th>
                     <th>Measurment</th>
