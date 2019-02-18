@@ -66,14 +66,7 @@ def scrape():
 
     # listings["tweet"] = soup.find(class_="content").get_text()    
     listings["tweets"] = soup.find(class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").get_text()    
-
-# Mars Hemispheres
-
-# JPL Mars Space Images - Featured Image
-
-    # Visit image for listings["website"]
-    url_mars_hemispheres = "http://www.planetary.org/blogs/guest-blogs/bill-dunford/20140203-the-faces-of-mars.html"
-    browser.visit(url_mars_hemispheres)
+    # listings["tweets_02"] = soup.find(class_= "content", class_=" TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").get_text()    
 
 
 
@@ -82,10 +75,9 @@ def scrape():
 
 
 
+#     time.sleep(1)
 
-    time.sleep(1)
-
-# JPL Mars Space Images - Featured Image
+# # JPL Mars Space Images - Featured Image
 
     # Visit image for listings["website"]
     url_mars_2 = "http://www.planetary.org/blogs/guest-blogs/bill-dunford/20140203-the-faces-of-mars.html"
@@ -100,6 +92,8 @@ def scrape():
     soup = BeautifulSoup(html_mars_2, "html.parser")
 
     # listings["image"] query
+    # listings["headline_img_2"] = soup.find('h5').get_text()    
+
     relative_image_path_2 = soup.find_all('img')[2]["src"]
 
     # Build final url to store
@@ -141,6 +135,43 @@ def scrape():
 
     # listings["image"] file
     listings["image_5"] = mars_img_5
+
+
+
+
+
+
+
+
+
+
+    listings["first_image_header"] = soup.find('h5').get_text()    
+
+    relative_image_path_4 = soup.find_all('h5')[1].get_text()
+    listings["first_image_header_2"] = relative_image_path_4   
+
+    relative_image_path_5 = soup.find_all('h5')[2].get_text()
+    listings["first_image_header_3"] = relative_image_path_5   
+
+    relative_image_path_6 = soup.find_all('h5')[3].get_text()
+    listings["first_image_header_4"] = relative_image_path_6
+
+    relative_image_path_7 = soup.find_all('h5')[4].get_text()
+    listings["first_image_header_5"] = relative_image_path_7     
+
+
+
+
+
+    # photo_credit
+
+
+
+
+
+        #   <h7 class="heading">{{listings.first_image_he2ader}}</h7>
+
+
 
 
 
