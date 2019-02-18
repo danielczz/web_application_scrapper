@@ -49,10 +49,6 @@ no-padding {
   padding-right: 0;
 }
 
-
-
-
-
 .main_text {
   text-indent: 20px;
   text-align: justify;
@@ -62,7 +58,7 @@ thead {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #167FFC;
   color: white;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
@@ -89,13 +85,7 @@ tbody {
   overflow-y: auto;
   
 }
-.main_text {
-  text-align: left;
-  margin: 10px;
 }
-}
-
-
 
 </style>
 </head>
@@ -114,10 +104,10 @@ tbody {
             <div class="navbar-collapse collapse" id="collapsingNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="assets/HTML_files/comparison.html">GitHub Repository </a>
+                        <a class="nav-link" href="https://github.com/danielczz/web_application_scrapper">GitHub Repository </a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="assets/HTML_files/dataviz.html">README direct link </a>
+                            <a class="nav-link" href="https://github.com/danielczz/web_application_scrapper/blob/master/README.md">README direct link </a>
                             
                     </li>
                 </ul>
@@ -130,20 +120,26 @@ tbody {
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the data!</a></p>
     </div>
 
+  <!-- Container declaration -->
     <div class="container-fluid">
       <div class="row">
+
+        <!-- First content to show in the top: News -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <hr>
           <h2> Latest NASA's headline news from Mars: </h2>
           <h5 class="heading">{{listings.headline}}: </h5>
           <h6 class="heading">{{listings.article_body}}</h6>
           <hr>
         </div>
 
+        <!-- First content to show in the left: Image -->
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="background-color:white;">
           <h2> Latest surface image from Mars: </h2>
           <img src="{{ listings.image }}" alt="mars_latest_image">
         </div>
 
+        <!-- First content to show in the right: Weather from Twitter -->
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color:white;">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:white;">
@@ -152,6 +148,7 @@ tbody {
               <hr>
             </div>
 
+        <!-- First content to show in the right: Mars Surface Facts -->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:white;">
               <h2> Mars's Factsheet: </h2>
               <table border="1" class="dataframe perz_table">
@@ -215,261 +212,34 @@ tbody {
           </div>
         </div>
 
-      
-
-
-
-
-
-
-
-
-
-
-
-    <div class="row">
-
-   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="background-color:lightblue;">
-      <h2>Featured Mars Space Image</h2>
-              <img src="{{ listings.image }}" alt="mars_latest_image">
-          
-                    <hr>
-                    </div>
-      
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color:gray;">.col-4
-        <div class="row">
-          <div class="col-md-12" style="background-color:orange;">.col-12
-          <h2>Weather twitter forecast </h2>
-          <h7 class="heading">{{listings.tweets}}</h7>
-          <hr>
-          </div>
-          </div>
-          <div class="col-12" style="background-color:red;">.col-12
-          <h2>Mars Facts </h2>
-
-                    <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Mars fact</th>
-      <th>Measurment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Equatorial Diameter:</td>
-      <td>6,792 km</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Polar Diameter:</td>
-      <td>6,752 km</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Mass:</td>
-      <td>6.42 x 10^23 kg (10.7% Earth)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Moons:</td>
-      <td>2 (Phobos &amp; Deimos)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Orbit Distance:</td>
-      <td>227,943,824 km (1.52 AU)</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Orbit Period:</td>
-      <td>687 days (1.9 years)</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Surface Temperature:</td>
-      <td>-153 to 20 °C</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>First Record:</td>
-      <td>2nd millennium BC</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Recorded By:</td>
-      <td>Egyptian astronomers</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-        </div>
-      </div>
-      
-      <div class="col-md-6" style="background-color:blue;">
-      .col-6
       <div class="row">
-          <div class="col-md-12" style="background-color:orange;">.col-12
-          <h4 class="heading">{{listings.first_image_header_2}}</h4>
-              <img src="{{ listings.image_2 }}" alt="mars_latest_image_2">
-              </div>
-
-          <div class="col-md-12" style="background-color:red;">.col-12
-          <h4 class="heading">{{listings.first_image_header_3}}</h4>
-
-              <img src="{{ listings.image_3 }}" alt="mars_latest_image_2">
-              </div>
-        </div>
-        </div>
-      
-      
-      <div class="col-md-6" style="background-color:gray;">.col-6
-        <div class="row">
-          <div class="col-md-12" style="background-color:orange;">.col-12
-           <h4 class="heading">{{listings.first_image_header_4}}</h4>
-
-              <img src="{{ listings.image_4 }}" alt="mars_latest_image_2">
-              </div>
-          <div class="col-md-12" style="background-color:red;">.col-12
-          <h4 class="heading">{{listings.first_image_header_5}}</h4>
-
-              <img src="{{ listings.image_5 }}" alt="mars_latest_image_2">
-
-        </div>
-        </div>
-      </div>
-      
- </div>
-</div>
-
-
-
-    <div class="jumbotron text-center">
-      <h1>Mars's missions briefing</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the data!</a></p>
-    </div>
-
-    <!-- NASA Mars News Listings (in this case just 1 element) -->
-    <h2>Latest NASA Mars News</h2>
-
-    <div class="row" id="craiglist-listings">
-      <div class="col-md-12">
-          <h4 class="heading">{{listings.headline}}</h4>
-          <h7 class="heading">{{listings.article_body}}</h7>
-          
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <hr>
-          <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Featured Mars Space Image</h2>
-              <img src="{{ listings.image }}" alt="mars_latest_image">
-          
-                    <hr>
-          <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Weather twitter forecast </h2>
-          <h7 class="heading">{{listings.tweets}}</h7>
+          <h2 style="text-align: center;"> Mars's Hemispheres: </h2>
+          <hr>
+        </div>
 
-
-                    <hr>
-
-
-                    <h2>Mars Facts </h2>
-
-                    <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Mars fact</th>
-      <th>Measurment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Equatorial Diameter:</td>
-      <td>6,792 km</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Polar Diameter:</td>
-      <td>6,752 km</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Mass:</td>
-      <td>6.42 x 10^23 kg (10.7% Earth)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Moons:</td>
-      <td>2 (Phobos &amp; Deimos)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Orbit Distance:</td>
-      <td>227,943,824 km (1.52 AU)</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Orbit Period:</td>
-      <td>687 days (1.9 years)</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Surface Temperature:</td>
-      <td>-153 to 20 °C</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>First Record:</td>
-      <td>2nd millennium BC</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Recorded By:</td>
-      <td>Egyptian astronomers</td>
-    </tr>
-  </tbody>
-</table>
-
-<iframe src='https://mars.nasa.gov/embed/6453/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
-
- <hr>
-          <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Featured Mars Space Image</h2>
-              
-              <h4 class="heading">{{listings.first_image_header_2}}</h4>
-              <img src="{{ listings.image_2 }}" alt="mars_latest_image_2">
-          
-
-          <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Featured Mars Space Image</h2>              
+        <!-- First content to show in the left: hemispheres -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <img src="{{ listings.image_2 }}" alt="mars_latest_image_2">
+          <h4 class="heading">{{listings.first_image_header_2}}</h4>
+          <img src="{{ listings.image_3 }}" alt="mars_latest_image_2">
           <h4 class="heading">{{listings.first_image_header_3}}</h4>
+          <hr>
+        </div>
 
-              <img src="{{ listings.image_3 }}" alt="mars_latest_image_2">
-          
-
-
-                              <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Featured Mars Space Image</h2>
+        <!-- First content to show in the right: hemispheres -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <img src="{{ listings.image_4 }}" alt="mars_latest_image_2">
           <h4 class="heading">{{listings.first_image_header_4}}</h4>
-
-              <img src="{{ listings.image_4 }}" alt="mars_latest_image_2">
-          
-
-
-                              <!-- JPL Mars Space Images - Featured Image -->
-          <h2>Featured Mars Space Image</h2>
+          <img src="{{ listings.image_5 }}" alt="mars_latest_image_2">
           <h4 class="heading">{{listings.first_image_header_5}}</h4>
-
-              <img src="{{ listings.image_5 }}" alt="mars_latest_image_2">
-
+          <hr>
+        </div>
+      </div>
 
       </div>
-      
     </div>
-    
-  </div>
-
 
   <!-- Footer customizations -->
 <div class="card fixed-bottom">
