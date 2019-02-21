@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mission Briefing: Mars</title>
+  <title> Real-time Mission Briefing for planet Mars </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -13,6 +13,11 @@
 
   <!-- Styling customizations -->
 <style>
+
+.jumbotron{
+    background: url("https://pixabay.com/get/e834b00e29e90021d85a5840981318c3fe76e7d019b6194092f0c8/solar-system-11111_1280.jpg") no-repeat center center; 
+    background-size: cover;
+}
 h4 {
     text-transform: uppercase;
     }
@@ -23,6 +28,10 @@ img {
   overflow-x: auto;
   overflow-y: auto;
     }
+
+h1 {
+  color: white;
+}
 
 h2 {
     margin-top: 10px;
@@ -97,7 +106,7 @@ tbody {
 <div class="container-fluid no-padding">
   <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-            <c class="navbar-brand abs" href="index.html">Mission Briefing for planet Mars</c  >
+            <c class="navbar-brand abs" href="index.html">Real-time Mission Briefing for planet Mars</c  >
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -127,7 +136,7 @@ tbody {
         <!-- First content to show in the top: News -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <hr>
-          <h2> Latest NASA's headline news from Mars: </h2>
+          <h2> Latest headline news from Mars: </h2>
           <h5 class="heading">{{listings.headline}}: </h5>
           <h6 class="heading">{{listings.article_body}}</h6>
           <hr>
@@ -143,9 +152,8 @@ tbody {
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color:white;">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:white;">
-              <h2> Latest weather Twitter forecast: </h2>
-              <h7 class="heading">{{listings.tweets}}</h7>
-              
+              <h2>Live weather forecast from Mars: </h2>
+              <h7 class="heading">{{listings.latest_tweet}}</h7>              
               <hr>
             </div>
 
@@ -222,19 +230,19 @@ tbody {
 
         <!-- First content to show in the left: hemispheres -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <img src="{{ listings.image_2 }}" alt="mars_latest_image_2">
-          <h4 class="heading">{{listings.first_image_header_2}}</h4>
-          <img src="{{ listings.image_3 }}" alt="mars_latest_image_2">
-          <h4 class="heading">{{listings.first_image_header_3}}</h4>
+          <h4 class="heading">{{listings.img_title_0}}</h4>
+          <img src="{{ listings.image_file_link_0 }}" alt="image_file_link_0">
+          <h4 class="heading">{{listings.img_title_1}}</h4>
+          <img src="{{ listings.image_file_link_1 }}" alt="image_file_link_1">
           <hr>
         </div>
 
         <!-- First content to show in the right: hemispheres -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <img src="{{ listings.image_4 }}" alt="mars_latest_image_2">
-          <h4 class="heading">{{listings.first_image_header_4}}</h4>
-          <img src="{{ listings.image_5 }}" alt="mars_latest_image_2">
-          <h4 class="heading">{{listings.first_image_header_5}}</h4>
+          <h4 class="heading">{{listings.img_title_2}}</h4>
+          <img src="{{ listings.image_file_link_2 }}" alt="image_file_link_2">
+          <h4 class="heading">{{listings.img_title_3}}</h4>
+          <img src="{{ listings.image_file_link_3 }}" alt="image_file_link_3">
           <hr>
         </div>
       </div>
