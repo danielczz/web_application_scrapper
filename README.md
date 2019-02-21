@@ -11,21 +11,21 @@ The main attributes of this particular information and data providers is that ar
 
 The direct links for the different assets for the analysis are as follows:
 
-1. Screenshots of your final web application: 
-[_click here_](https://github.com/danielczz/)
+1. Screenshots of final web application: 
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/app_screenshot/Real-time%20Mission%20Briefing%20for%20planet%20Mars.pdf)
 
 1. Main Python script: 
-[_click here_](https://github.com/danielczz/)
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/scrape_mission_to_mars.py)
 
 1. Main Jupyter Notebook script: 
-[_click here_](https://github.com/danielczz/)
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/jupyter/mission_to_mars.ipynb)
 
 
 1. Main MongoDB in Python: 
-[_click here_](https://github.com/danielczz/)
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/app.py)
 
 1. Main HTML file: 
-[_click here_](https://github.com/danielczz/)
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/templates/index.html)
 
 ### **Technology landscape**
 
