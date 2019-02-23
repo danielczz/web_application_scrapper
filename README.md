@@ -12,7 +12,7 @@ The main attributes of this particular information and data providers is that ar
 The direct links for the different assets for the analysis are as follows:
 
 1. Screenshots of final web application: 
-[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/app_screenshot/Real-time%20Mission%20Briefing%20for%20planet%20Mars.pdf)
+[_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/images/screencapture.png)
 
 1. Main Python script: 
 [_click here_](https://github.com/danielczz/web_application_scrapper/blob/master/scrape_mission_to_mars.py)

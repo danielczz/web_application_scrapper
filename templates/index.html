@@ -15,7 +15,7 @@
 <style>
 
 .jumbotron{
-    background: url("https://pixabay.com/get/e834b00e29e90021d85a5840981318c3fe76e7d019b6194092f0c8/solar-system-11111_1280.jpg") no-repeat center center; 
+    background: url('https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA19129-1920x1200.jpg') no-repeat center center; 
     background-size: cover;
 }
 h4 {
@@ -29,8 +29,16 @@ img {
   overflow-y: auto;
     }
 
+.navbar{
+  background-image:-webkit-linear-gradient(0,rgb(0,0,0) 0%,rgb(214,66,2) 100%);
+  background-image:-moz-linear-gradient(0,rgb(0,0,0) 0%,rgb(214,66,2) 100%);
+  background-image:-o-linear-gradient(0,rgb(0,0,0) 0%,rgb(214,66,2) 100%);
+  background-image:-ms-linear-gradient(0,rgb(0,0,0) 0%,rgb(214,66,2) 100%);
+}
+
 h1 {
-  color: white;
+  text-shadow:rgb(232, 124, 16) -100px 0px 78px;
+  color:rgb(69, 24, 4);
 }
 
 h2 {
@@ -38,6 +46,11 @@ h2 {
     text-align: justify;
     text-indent: 15px;
     }
+
+H2 {
+  color:rgb(69, 24, 4);
+
+}
 
 h5 {
     text-indent: 15px;
@@ -124,7 +137,7 @@ tbody {
     </nav>
 
   <!-- Jumbotron customizations -->
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-left">
           <h1>Step 1 - Scraping: Mars's missions briefing</h1>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the data!</a></p>
     </div>
